@@ -10,14 +10,17 @@
 				<%= link_to "Sign Out", destroy_moussaillon_session_path, method: :delete %>
 				</li>
 				<li>
-				<%= current_moussaillon.email %>
+				<%= link_to "Edit Account", edit_moussaillon_registration_path%>
 				</li>
+				<p> <%= gossips.all %> 
+				</p>
 			<% else %>
+				<h3>Hey bro connecte-toi ou inscris-toi !</h3>
 				<li>
 				<%= link_to "Sign In", new_moussaillon_session_path %>
 				</li>
 				<li>
-				<%= link_to "Sign Up", new_moussaillon_registration_path, method: :delete %>
+				<%= link_to "Sign Up", new_moussaillon_registration_path %>
 				</li>
 			<% end %>
 
